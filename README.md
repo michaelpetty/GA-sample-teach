@@ -75,3 +75,10 @@ Create a function called `getSum` that takes two Number inputs and `returns` the
 - Is self-contained; pass in all values needed
 - Name is descriptive action
   - isBlue, getTotal, deleteItem
+
+---
+
+## Deliverable
+##### [Functions Lab](https://git.generalassemb.ly/sf-sei-5/functions-lab) #####
+
+Continue practicing what we started in class. Make use of all available resources. (MDN a great place to look.)
