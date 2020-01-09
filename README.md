@@ -1,58 +1,77 @@
-# ![](http://codetojoy.tech/i/cogs/cog_purp_bk.png) GA-SEI-About-Me
-Portfolio project highlighting HTML, CSS and JavaScript
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) FUNCTIONS
+
+#### LEARNING OBJECTIVES
+
+*After this lesson, students will be able to:*
+- declare a function
+- call a function
 
 ---
 
-#### Technologies Used
-- HTML
-- CSS
-- JavaScript
-- Google Fonts
-- Font Awesome
-- wireframe.cc
+### Intro to functions
 
+Functions help us write cleaner, more organized programs. With a function you can group all the logic specific to a task in one place. The function can then be called when you need to perform that task. This reduces repeating the code in multiple places resulting in smaller programs.
+
+#### Syntax
+
+```javascript
+() => {}  // ES6 arrow function
+function () {} //pre ES6 function expression
+
+```
+#### Assignment
+
+Because a function is a value, data type of `Function Object`, we can assign it to a variable.
+
+```javascript
+const countFromTo = () => {
+  for(i=1; i<=5; i++) {
+    console.log(i);
+  }
+}
+```
 ---
 
-#### Process
-1. research wireframe tool options
-2. create wireframe
-3. write out requirements for each section
-4. build splash header
-- research setTimeout and setInterval
-5. carousel
-- write out pseudocode
-- build initial code
-- build html container
-- iterate, iterate, iterate through code
-- prev/next arrows
-6. add testimony and timer
-7. add location functionality to navbar
-8. add dots to carousel
-9. lightbox
-- build lightbox modal
-- create event to display modal w img
+### Return statement
 
+A function will always return a value even if not explicitly set. Using a `return` statement allows you to specify the value returned. If not set, a function (in most cases) returns `undefined`.
+
+
+
+### Calling/Invoking
+
+Invoke a function by placing parentheses, aka, the "call", after the function name.
+
+```javascript
+countFromTo(); // 1 2 3 4 5
+```
+
+### Parameters and arguments
+
+A function can take in any number of inputs by setting parameters when defining the function. The parameters are variables that can be used in the body of the function.
+
+When we invoke a function, we pass in arguments through the call, the parentheses. Those arguments set the values for the parameters used in the function.
+
+```javascript
+const countFromTo = (start, stop) => {
+	for (i=start; i<=stop; i++) {
+		console.log(i);
+	}
+	return "Done!";
+}
+
+countFromTo(2,7); // 2 3 4 5 6 7 'Done!'
+```
 ---
 
-#### Unsolved Problems
+&#x1F535; **Activity**
 
-- could not get values of css variables at load of document to manipulate in js
-
----
-
-#### Big Wins & Big Challenges
-
-- **W** building the carousel by hand
-- **C** building the carousel by hand
-- **C** wireframe
-- **C** time management
-- **W** using element attribute data- dataset to send slide and slide dot info
+Create a function called `getSum` that takes two Number inputs and `returns` the sum of the numbers.
 
 ---
+### Best practices for functions
 
-#### Snippets
-![](readme-assets/Homepage.png)
-
-![](readme-assets/fadeToggle.png)
-
-![](readme-assets/nextArrow.png)
+- Does one specific thing
+- Is self-contained; pass in all values needed
+- Name is descriptive action
+  - isBlue, getTotal, deleteItem
